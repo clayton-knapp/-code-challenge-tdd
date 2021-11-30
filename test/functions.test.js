@@ -187,7 +187,7 @@ test('check to see if getSecondItem take an array and return the second item in 
 
     const expected2 = 'pear';
 
-    const actual2 = getSecondItem(['apple', 'pear', 'orange', 'bananna']);
+    const actual2 = getSecondItem(['apple', 'pear', 'orange', 'banana']);
 
     expect.deepEqual(actual2, expected2, 'this should return "pear"');
 
@@ -227,18 +227,18 @@ test('check to see if getLastItem take an array and return the LAST item in the 
 //BONUS
 //getRandomNumber
 test('check to see if getRandomNumber makes a random number (integer) between 0 and 5', (expect) => {
-    const expected1 = 'number';
+    const expected = 'number';
 
-    const actual1 = getRandomNumber();
+    const actual = getRandomNumber();
 
-    expect.equal(typeof actual1, expected1, 'this should check if it returns a number');
+    expect.equal(typeof actual, expected, 'this should check if it returns a number');
 
 
-    // const expected2 = 0 || 1 || 2 || 3 || 4;
 
-    const actual2 = getRandomNumber();
+    expect.equal(true, actual === 0 || actual === 1 || actual === 2 || actual === 3 || actual === 4, 'this should check if the number returned is 0, 1, 2, 3, or 4 ');
 
-    expect.equal(true, actual2 === 0 || actual2 === 1 || actual2 === 2 || actual2 === 3 || actual2 === 4, 'this should check if the number returned is 0, 1, 2, 3, or 4 ""');
+
+    expect.equal(true, actual >= 0 && actual <= 4, 'this should check if the number returned is between 0 and 5 ');
 
 });
 
